@@ -13,7 +13,7 @@
 	<% @entries.each do |entry| %>
 	  <h2> <%= entry.title %> </h2>
 	   <div id="blog_main">
-	     <%= entry.body %>
+	     <%= raw(entry.body) %>
 	   </div>
 
 	   <div id="article-tags">
