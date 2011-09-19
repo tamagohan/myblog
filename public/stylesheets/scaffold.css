@@ -1,3 +1,368 @@
+body {
+/*	font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro"; */
+	font-size: 75%;
+	line-height: 2;
+	color: #666666;
+	background-color: #f0f5f7;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+/*	background-image: url(../images/body_bg.jpg); */
+	background-image: url(../images/body_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-attachment:fixed;
+}
+
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+img {
+	border: none;
+}
+
+input,textarea,select {
+	font-size: 1em;
+}
+
+form {
+	margin: 0px;
+}
+
+table {
+	border-collapse:collapse;
+	font-size: 100%;
+	border-spacing: 0;
+}
+
+
+
+/*リンク設定
+---------------------------------------------------------------------------*/
+a {
+	color: #666666;		/*リンクの文字色*/
+}
+
+a:hover {
+	color: #61AAC8;		/*カーソルオーバー時の文字色*/
+	text-decoration: none;	/*オーバー時に下線を消す設定。入れたままがいいならこの１行削除。*/
+}
+
+
+
+/*コンテナー（HPを囲むボックス）
+---------------------------------------------------------------------------*/
+#container {
+	width: 943px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+}
+
+
+
+/*ヘッダー（右上の写真とh1タグが入ったボックス）
+---------------------------------------------------------------------------*/
+#header {
+	background-image: url(../images/mainimg.jpg);	/*ヘッダー背景画像*/
+	background-repeat: no-repeat;
+	height: 138px;	/*ヘッダーの高さ。背景画像の高さに2を加えた数字にする。*/
+	width: 718px;
+	position: relative;
+	margin-bottom: 3px;
+	border: 1px solid #a7d5e8;
+	background-position: center center;
+	background-color: #FFFFFF;
+}
+
+#header h1 {
+	font-size: 11px;		/*h1タグの文字サイズ*/
+	color: #FFFFFF;	/*h1タグの文字色*/
+	line-height: 13px;
+	position: absolute;
+	right: 10px;	/*ヘッダーに対して右から10pxの位置に配置*/
+	bottom: 10px;	/*ヘッダーに対して下から10pxの位置に配置*/
+}
+
+
+
+/*ロゴ画像
+---------------------------------------------------------------------------*/
+#logo {
+	padding-bottom: 3px;
+}
+
+
+
+/*メインコンテンツ（右側）
+---------------------------------------------------------------------------*/
+#main {
+	width: 720px;
+	float: right;
+	padding-bottom: 50px;
+}
+
+
+/*日付部分*/
+#main h2 {
+	font-size: 180%;
+	background-color: #FFFFFF;
+	border-bottom: 4px solid #61AAC8;		/*h2タグの下線*/
+	background-image: url(../images/h2bg.gif);	/*h2タグの背景画像*/
+	background-position: bottom;
+	background-repeat: repeat-x;
+	border-top: 1px solid #d6e9f1;			/*h2タグの上線*/
+	padding: 5px 5px 3px 10px;
+}
+
+//追加
+#main h4 {
+	background-color: #FFFFFF;
+	border-bottom: 4px solid #61AAC8;		/*h2タグの下線*/
+	background-image: url(../images/h2bg.gif);	/*h2タグの背景画像*/
+	background-position: bottom;
+	background-repeat: repeat-x;
+	border-top: 1px solid #d6e9f1;			/*h2タグの上線*/
+	padding: 5px 5px 3px 10px;
+}
+
+#main p {
+	padding: 0.5em 10px 1em;
+}
+
+/*メインコンテンツ内のボックス*/
+.mainbox {
+	background-color: #FFFFFF;	/*背景色*/
+	border: 1px solid #a7d5e8;	/*枠線色*/
+	padding: 5px;				/*余白*/
+	margin-bottom: 2em;
+}
+
+
+
+/*サイドコンテンツ（左側）
+---------------------------------------------------------------------------*/
+#side {
+	float: left;
+	width: 200px;
+	padding-bottom: 50px;
+}
+
+#side h3 {
+	font-size: 100%;				/*h3タグの文字色*/
+	background-color: #FFFFFF;	/*h3タグの背景色*/
+	padding-left: 20px;
+	border: 1px solid #a7d5e8;
+}
+
+#side p {
+	padding-top: 0.5em;
+	padding-bottom: 1em;
+}
+
+
+
+/*メインメニュー
+---------------------------------------------------------------------------*/
+ul.menu {
+	margin-bottom: 1em;
+}
+
+ul.menu li {
+	margin-bottom: 3px;
+}
+
+ul.menu a {
+	line-height: 60px;
+	color: #666666;	/*メニューの文字色*/
+	text-decoration: none;
+	background-image: url(../images/menu_bg.gif);	/*メニューの背景画像*/
+	background-repeat: no-repeat;
+	display: block;
+	height: 60px;
+	width: 180px;
+	background-position: top;	/*画像の上半分だけを表示させる設定*/
+	padding-left: 20px;
+	overflow: hidden;
+}
+
+ul.menu a:hover {
+	background-position: bottom;
+}
+
+
+
+/*フッター（コピーライトとか入っている最下部ブロック）
+---------------------------------------------------------------------------*/
+#footer {
+	text-align: center;
+	clear: both;
+	width: 100%;
+}
+
+
+
+/*トップページの「What's New」部分
+---------------------------------------------------------------------------*/
+#main dl.new {
+	width: 688px;			/*What's Newボックスの幅*/
+	height: 140px;			/*What's Newボックスの高さ*/
+	overflow: auto;
+	padding: 10px;
+}
+
+#main dl.new dt {
+	font-weight: bold;		/*日付の色を太字にする*/
+}
+
+#main dl.new dd {
+	border-bottom: 1px solid #d6e9f1;	/*日付ごとに入る下線*/
+}
+
+
+/*blog部分
+--------------------------------------------------------------------
+*/
+#main_blog{
+    margin: 50px;
+}
+#main dl.blog dt{
+/*	font-weight: bold;		/*日付の色を太字にする*/
+    /*font-size: x-large*/
+}
+
+/*#main dl.blog dd{
+	border-bottom: 2px solid #d6e9f1;*/	/*日付ごとに入る下線*/
+/*}*/
+#main dl.blog dd{
+    margin: 40px 0px -30px 40px;
+}
+
+#blog_main{
+    font-size: 120%;
+    margin: 40px 0px 40px 40px; /* 上 右 下 左*/
+}
+
+#note {
+    border: 2px dashed;
+    margin: 10px 20px 10px 50px;
+    padding: 20px;
+}
+
+#main dl.blog ol{
+    /*margin: 10px 50px 10px 20px;*/
+    border solid;
+}
+
+
+/*記事の終了
+------------------------------------------------------------------------*/
+/*dl.article-tags {*/
+
+#article-tags {width:668px;
+	margin: 0px 5px;}
+#article-tags dl { 
+    margin:  0px 0px 0px 0px;
+    padding:  0px 0px 0px 0px;
+    font-size:small;
+    /*border-style: solid none none;*/
+    border-top: 1px solid #61AAC8;
+}
+
+#article-tags dt {
+    font-style: normal;font-weight:bold;
+    line-height: 1.2em;
+    margin:10px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width:6.5em;
+}
+
+#article-tags dd {
+    position:relative; 
+    top:-4.35em; 
+    left:0.5em;
+    border-width: 0px; 
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px; 
+    line-height: 100%;
+    z-index:1;
+    width:80%;line-height: 1.2em;
+}
+
+
+
+
+/*
+
+	margin: 15px 0 0;
+	/*background: url(http://parts.blog.livedoor.jp/img/usr/canvas/common/tag.gif) no-repeat left top;*/
+/*	line-height: 20px;
+	padding-left: 20px;
+}*/
+
+
+div.article-footer {
+	padding: 0px;
+	margin: 0px 10px;
+	border-width: 1px;
+
+}
+
+ul.article-info {
+	list-style: none;
+	margin: -10px 0px 0px 0px;
+/*	padding: 0 0 5px 10px;*/
+	text-align: right;
+}
+
+
+
+
+/*テーブル
+---------------------------------------------------------------------------*/
+.ta1 {
+	width: 708px;
+}
+
+.ta1, .ta1 td, .ta1 th{
+	border: 1px solid #a7d5e8;
+}
+
+.ta1 td, .ta1 th{
+	padding: 10px;	/*テーブル内の余白*/
+}
+
+.ta1 th{
+	background-color: #F5FAFC;	/*左側thタグの背景色*/
+	width: 150px;				/*左側thタグの幅*/
+	text-align: center;
+}
+
+
+
+/*その他
+---------------------------------------------------------------------------*/
+.color1 {
+	color: #e86f85;
+}
+
+.look {
+	background-color: #F3F0ED;
+}
+
+.mb1em {
+	margin-bottom: 1em;
+}
+
+
+
 
 
 
