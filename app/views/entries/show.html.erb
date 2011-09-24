@@ -1,15 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @entry.title %>
-</p>
+<dl class="blog">
+  <h2> <%= @entry.title %> </h2>
+  <div id="blog_main">
+    <%= raw(@entry.body) %>
+  </div>
+  
+  <div id="article-tags">
+    <dl>
+      <dt>タグ ：</dt>
+      <dd><a href="http://tamagohan.ddo.jp/~masaki/tag" title="ポータル タグ一覧ページへ" rel="tag">rails</a>        
+	<a href="http://tamagohan.ddo.jp/~masaki/tag" title="ポータル タグ一覧ページへ" rel="tag">heroku</a>
+      </dd>
+    </dl>
+  </div>
+  <div class="article-footer">                                                                                     
+    <ul class="article-info">
+      <li><abbr class="updated" title="2011-01-29T01:42:05+0900">
+          <span class="article-date"><%= @entry.created_at %></span>
+      </li>
+    </ul>
+  </div>      
 
-<p>
-  <b>Body:</b>
-  <%=raw(@entry.body) %>
-</p>
-
+</dl>
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>

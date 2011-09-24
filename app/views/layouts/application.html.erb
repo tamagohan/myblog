@@ -37,8 +37,57 @@
   </script>
 </head>
 <body>
+<div id="container">
+  <div id="main">
 
-<%= yield %>
+    <div id="header">
+      <h1>サーバ, rails, Android,プログラミング関係のことを書けたらいいなぁ。。</h1>
+    </div><!--/header-->
+    <div class="mainbox">
+      
+      <%= yield %>
+
+    </div><!--/mainbox-->
+    <%= link_to 'New Entry', new_entry_path %>
+  </div><!--/main-->
+
+
+
+  <div id="side">
+    <!-- <a href="index.html"><img src="images/sobatya_bigger.gif.png" alt="tamagohan's Blog" name="logo" width="200" height="140" id="logo" /></a><br /> -->
+    <!--      <a href="index.html"><img src="../../../../public/images/logo.gif" alt="tamagohan's Blog" name="logo" width="200" height="140" id="logo" /></a><br /> -->
+    <%= image_tag('logo.gif', :alt => "tamagohan's Blog", :width => '200', :height => '140') %>
+    <ul class="menu">
+      <li><a href="index.html">top page</a></li>
+      <li><a href="aboutaaaaaaaaa.html">about</a></li>
+      <li><a href="worksaaaaaaaaa.html">works</a></li>
+      <li><a href="#aaaaaaa">blog</a></li>
+      <li><a href="link.html">link</a></li>
+    </ul>
+
+    <h3>当ブログについて</h3>
+    rails, サーバ系のことについておもいつくままに書いています。
+    間違っていたところがありましたら、指摘してもらえると嬉しいです。
+
+    <!-- <p>段落タグ&lt;p&gt;で囲みましょう。余白が自動で反映されます。 </p> -->
+
+    <h3>twitterやってます</h3>
+    <%= image_tag('sobatya_bigger.gif.png', :alt => 'tamagohan_high') %>
+    <a href="http://twitter.com/#!/tamagohan_high">tamagohan_high</a>
+    <h3>サポート</h3>	
+
+  </div>
+  <!--/side-->
+    
+    
+  <div id="footer">
+    Copyright&copy; 2010 たまごはんのブログ All Rights Reserved.<br />
+    <a href="http://nikukyu-punch.com/" target="_blank">Template design by Nikukyu-Punch</a>
+  </div>
+  <!--/footer-->
+</div>
+<!--/container-->
+
 
 </body>
 </html>

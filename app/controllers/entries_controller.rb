@@ -2,7 +2,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.xml
   def index
-    @entries = Entry.all
+    @entries = Entry.order('created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -79,5 +79,12 @@ class EntriesController < ApplicationController
       format.html { redirect_to(entries_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def page
+    page_size = 3
+    page_num = params[:id] == nil ? 0 : params[:id].to_i - 1
+    @entries = Entry.order('created_at DESC').limit(page_size).offset(page_size * page_num)
+    render 'entries/index'
   end
 end
