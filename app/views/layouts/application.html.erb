@@ -5,6 +5,36 @@
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+
+<!--  <link type="text/css" rel="stylesheet" href="/public/SyntaxHighlighter/Styles/SyntaxHighlighter.css" />
+  <script type="text/javascript" src="/public/SyntaxHighlighter/Scripts/shCore.js"></script>
+  <!-- 以下は表示したい言語に応じて -->
+<!--  <script type="text/javascript" src="/public/SyntaxHighlighter/Scripts/shBrushJScript.js"></script>
+  <script type="text/javascript" src="/public/SyntaxHighlighter/Scripts/shBrushCss.js"></script>
+  <script type="text/javascript" src="/public/SyntaxHighlighter/Scripts/shBrushPhp.js"></script>
+  <script type="text/javascript" src="/public/SyntaxHighlighter/Scripts/shBrushXml.js"></script>
+  <script type="text/javascript" src="/public/SyntaxHighlighter/Scripts/shBrushRuby.js"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+    dp.SyntaxHighlighter.ClipboardSwf = 'Scripts/clipboard.swf';
+    dp.SyntaxHighlighter.HighlightAll('code');
+    }
+  </script>
+-->
+<%= stylesheet_link_tag '/SyntaxHighlighter/Styles/SyntaxHighlighter.css' %>
+<%= javascript_include_tag '/SyntaxHighlighter/Scripts/shCore.js' %>
+<%= javascript_include_tag   '/SyntaxHighlighter/Scripts/shBrushJScript.js' %>
+<%= javascript_include_tag '/SyntaxHighlighter/Scripts/shBrushCss.js' %>
+<%= javascript_include_tag '/SyntaxHighlighter/Scripts/shBrushPhp.js' %>
+<%= javascript_include_tag '/SyntaxHighlighter/Scripts/shBrushXml.js' %>
+<%= javascript_include_tag '/SyntaxHighlighter/Scripts/shBrushRuby.js' %>
+
+  <script type="text/javascript">
+    window.onload = function () {
+    dp.SyntaxHighlighter.ClipboardSwf = 'Scripts/clipboard.swf';
+    dp.SyntaxHighlighter.HighlightAll('code');
+    }
+  </script>
 </head>
 <body>
 
