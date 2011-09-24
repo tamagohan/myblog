@@ -24,6 +24,12 @@
       </ul>
     </div>      
   <% end %>
+  <% unless @pre_page.nil? %>
+    <%= link_to '前のページ', "/entries/page/#{@pre_page}" %>
+  <% end %>
+  <% unless @succ_page.nil? %>
+    <%= link_to '次のページ', "/entries/page/#{@succ_page}" %>
+  <% end %>
 </dl>
 
 

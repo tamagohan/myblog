@@ -85,6 +85,9 @@ class EntriesController < ApplicationController
     page_size = 3
     page_num = params[:id] == nil ? 0 : params[:id].to_i - 1
     @entries = Entry.order('created_at DESC').limit(page_size).offset(page_size * page_num)
+    max_page = (Entry.count.to_f / page_size).ceil
+    @pre_page = page_num > 0 ? page_num  : nil
+    @succ_page = page_num + 2 <= max_page ? page_num + 2 : nil 
     render 'entries/index'
   end
 end
