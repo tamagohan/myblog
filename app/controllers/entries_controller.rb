@@ -1,4 +1,7 @@
+# -*- coding: utf-8 -*-
 class EntriesController < ApplicationController
+  before_filter :require_account, :only => [:new, :edit, :create, :update, :destroy]
+
   # GET /entries
   # GET /entries.xml
   def index
@@ -14,6 +17,7 @@ class EntriesController < ApplicationController
   # GET /entries/1.xml
   def show
     @entry = Entry.find(params[:id])
+    @comments = @entry.comments
 
     respond_to do |format|
       format.html # show.html.erb
@@ -89,5 +93,14 @@ class EntriesController < ApplicationController
     @pre_page = page_num > 0 ? page_num  : nil
     @succ_page = page_num + 2 <= max_page ? page_num + 2 : nil 
     render 'entries/index'
+  end
+
+  def require_account
+    unless current_account
+      store_location
+      flash[:notice] = 'ログインしてください。'
+      redirect_to new_account_session_url
+      return false
+    end
   end
 end

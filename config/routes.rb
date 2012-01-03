@@ -1,5 +1,9 @@
 Myblog::Application.routes.draw do
 
+  resources :accounts
+
+  resources :comments
+
   resources :entries do
     collection do
       get 'page'
@@ -7,7 +11,11 @@ Myblog::Application.routes.draw do
     end
    end
 
+  resource :account_session, :only=>[:new, :create, :destroy]
+
   match 'entries/page/:id', :to => 'entries#page'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -20,7 +20,12 @@
           <span class="article-date"><%= @entry.created_at %></span>
       </li>
     </ul>
-  </div>      
+  </div>
+  <% @comments.each do |comment| %>
+    <div id="comment_main">
+      comment.body
+    </div>
+  <% end %>
 
 </dl>
 

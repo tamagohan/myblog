@@ -37,6 +37,11 @@
   </script>
 </head>
 <body>
+<% unless current_account.nil? %>
+  <Div Align="right">
+    <%= link_to 'logout', account_session_path, :method => :delete %>
+  </Div>
+<% end %>
 <div id="container">
   <div id="main">
 

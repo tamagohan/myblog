@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @account.login %>
+</p>
+
+<p>
+  <b>Login count:</b>
+  <%= @account.login_count %>
+</p>
+
+<p>
+  <b>Current login at:</b>
+  <%= @account.current_login_at %>
+</p>
+
+<p>
+  <b>Last login at:</b>
+  <%= @account.last_login_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>
